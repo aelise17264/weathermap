@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/aelise17264/weathermap/issues"
   },
-  "homepage": "https://github.com/aelise17264/weathermap#readme"
+  "homepage": "https://github.com/aelise17264/weathermap#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
