@@ -19,6 +19,8 @@ app.use('/static', express.static(path.join(__dirname, '/public/')))
 app.get('/style.css', function(req, res) {
     res.sendFile(__dirname + "/" + "style.css");
   });
+
+  
 app.post("/", function(req, res){
     const city = req.body.cityName
     const apiKey = "17c6fe1cd23655b9668e47afe891c9da"
@@ -37,6 +39,8 @@ app.post("/", function(req, res){
             const wind = weatherData.wind.speed
             const icon = weatherData.weather[0].icon
             const imageURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
+            
+            res.write("<div class='weatherReport'>")
             res.write("<h1>The weather is currently " + description + " in " + city + "</h1>")
             res.write("<img src=" + imageURL + ">")
             res.write("<h2>The current temperature is " + temp + " degrees F</h2>")
@@ -51,6 +55,7 @@ app.post("/", function(req, res){
 
            res.write("<h3>Wind speed of " + wind + " mph </h3>")
            res.write("<p>To search a new city click the back arrow</p>")
+           res.write("</div>")
            res.send()
        })
     })
