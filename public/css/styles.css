@@ -1,0 +1,12 @@
+html{
+    background-image: url("https://u01.appmifile.com/images/2019/06/27/3dfbd421-111a-484b-a250-5521fe7e49cf.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;}
+
+.landingPage{
+    margin-top: 25vh;
+    background: rgba(255, 255, 255, .5);
+    ;
+}

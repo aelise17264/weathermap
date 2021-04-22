@@ -4,14 +4,26 @@
  <html lang="en" dir="ltr">
      <head>
          <meta charset="utf-8">
+<!--         <base href="/">
+          <link href="/styles.css" rel="stylesheet" type="text/css" /> -->
+          <link type="text/css" rel="stylesheet" href="css/styles.css">
+
          <title>My Weather App</title>
+
+         
      </head>
      <body>
+         <center>
+             <div class="landingPage">
+         <h1>What's the Weather</h1>
+         <h2>Search any city in the world to find up to date weather forecasts</h2>
         <form class="cityForm" action="/" method="post">
             <label for="cityInput">City Name: </label>
             <input id="cityInput" type="text" name="cityName">
             <button type="submit">Go</button>
         </form>
+    </div>
+    </center>
      </body>
 
  </html>
