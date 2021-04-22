@@ -2,24 +2,30 @@ const express = require("express")
 const path = require("path")
 const https = require('https');
 const bodyParser = require("body-parser")
+const fs = require('fs')
 
 const app = express();
+
+// this line of code makes the css render on the landing page
+app.use(express.static('public'))
+
 app.use(bodyParser.urlencoded({extended: true}))
 
+// app.use(express.static(path.join(__dirname, 'public')))
+
+// app.use('/static', express.static(__dirname + '/public'))
+// app.use(express.static(__dirname + '/files'))
+
 app.get('/', function(req, res){
-    res.sendFile(__dirname + '/index.html')
+    res.sendFile(__dirname + '/public/css/index.html')
 
 })
+// app.get('/css/styles.css', function(req, res){
+//     res.sendFile(__dirname + "/" + "css/styles.css")
+// })
 
-app.use(express.static('public'))
-app.use(express.static('files'))
 
-app.use('/static', express.static(path.join(__dirname, '/public/')))
-
-app.get('/style.css', function(req, res) {
-    res.sendFile(__dirname + "/" + "style.css");
-  });
-
+// app.use("/styles", express.static(__dirname + '/css/styles'));
   
 app.post("/", function(req, res){
     const city = req.body.cityName
@@ -44,14 +50,14 @@ app.post("/", function(req, res){
             res.write("<h1>The weather is currently " + description + " in " + city + "</h1>")
             res.write("<img src=" + imageURL + ">")
             res.write("<h2>The current temperature is " + temp + " degrees F</h2>")
-           res.write("<h3>It feels like " + feel + " out there")
-            if(feel < 32){
-                res.write("<h3>It's cold out there. Make sure to wear your mittens!</h3>")
-            }else if(feel > 75){
-                res.write("<h3>It's a hot one out there. Make sure you put on some sunscreen!</h3>")
-            }else{
-                res.write("<h3>It's a nice day outside!</h3>")
-            }
+            res.write("<h3>It feels like " + feel + " degrees F")
+                if(feel < 45){
+                    res.write("<h3>It's cold out there. Make sure to wear your mittens!</h3>")
+                }else if(feel > 75){
+                    res.write("<h3>It's a hot one out there. Make sure you put on some sunscreen!</h3>")
+                }else{
+                    res.write("<h3>It's a nice day outside!</h3>")
+                }
 
            res.write("<h3>Wind speed of " + wind + " mph </h3>")
            res.write("<p>To search a new city click the back arrow</p>")
