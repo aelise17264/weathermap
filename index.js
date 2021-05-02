@@ -45,8 +45,9 @@ app.post("/", function(req, res){
             const wind = weatherData.wind.speed
             const icon = weatherData.weather[0].icon
             const imageURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
+            res.write("<head><link type='text/css' href='/css/styles.css' rel='stylesheet'><link rel='preconnect' href='https://fonts.gstatic.com'><link href='https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap' rel='stylesheet' type='text/css'></head>")
             
-            res.write("<div class='weatherReport'>")
+            res.write("<center><div class='weatherReport'>")
             res.write("<h1>The weather is currently " + description + " in " + city + "</h1>")
             res.write("<img src=" + imageURL + ">")
             res.write("<h2>The current temperature is " + temp + " degrees F</h2>")
@@ -61,7 +62,7 @@ app.post("/", function(req, res){
 
            res.write("<h3>Wind speed of " + wind + " mph </h3>")
            res.write("<p>To search a new city click the back arrow</p>")
-           res.write("</div>")
+           res.write("</div></center>")
            res.send()
        })
     })
