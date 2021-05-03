@@ -9,7 +9,7 @@ body{
 }
 
 .landingPage{
-    margin-top: 15vh;
+    margin-top: 5vh;
     background: rgba(255, 255, 255, .5);
     width: 35vw;
     height: 45vh;
@@ -71,7 +71,7 @@ body{
     /* background: rgba(49, 78, 82, .75); */
     background: rgba(255, 255, 255, .5);
     width: 35vw;
-    height: 75vh;
+    height: 90vh;
     padding: 2%;
     color: #314e52;
     align-items: center;
