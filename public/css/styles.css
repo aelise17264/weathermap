@@ -70,9 +70,8 @@ body{
     margin-top: 15vh;
     /* background: rgba(49, 78, 82, .75); */
     background: rgba(255, 255, 255, .5);
-
     width: 35vw;
-    height: 55vh;
+    height: 75vh;
     padding: 2%;
     color: #314e52;
     align-items: center;
@@ -92,6 +91,7 @@ body{
 
     .weatherReport h2{
         margin-top: 0%;
+     
     }
 
     .weatherReport img{
