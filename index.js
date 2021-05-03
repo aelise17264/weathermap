@@ -50,8 +50,8 @@ app.post("/", function(req, res){
             res.write("<center><div class='weatherReport'>")
             res.write("<h1>The weather is currently " + description + " in " + city + "</h1>")
             res.write("<img src=" + imageURL + ">")
-            res.write("<h2>The current temperature is " + temp + " &#176 F</h2>")
-            res.write("<h3>It feels like " + feel + " degrees F")
+            res.write("<h2>The current temperature is " + temp + "&#176 F</h2>")
+            res.write("<h3>It feels like " + feel + "&#176 F")
                 if(feel < 45){
                     res.write("<h3>It's cold out there. Make sure to wear your mittens!</h3>")
                 }else if(feel > 75){

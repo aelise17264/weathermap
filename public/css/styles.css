@@ -80,6 +80,7 @@ body{
 }
 
     .weatherReport p{
+        margin-top: 2%;
         color: navy;
         font-weight: bold;
     }
@@ -94,7 +95,7 @@ body{
     }
 
     .weatherReport img{
-        height: 35%;
+        height: 30%;
         margin: 0%;
         padding: 0%;
     }
