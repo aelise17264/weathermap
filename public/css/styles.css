@@ -80,7 +80,7 @@ body{
 }
 
     .weatherReport p{
-        margin-top: 2%;
+        padding-top: 2%;
         color: navy;
         font-weight: bold;
     }
