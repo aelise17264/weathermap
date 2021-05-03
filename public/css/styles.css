@@ -12,7 +12,7 @@ body{
     margin-top: 15vh;
     background: rgba(255, 255, 255, .5);
     width: 35vw;
-    height: 45vh;
+    height: 50vh;
     padding-top: 2%;
     color: #314e52;
 }
@@ -82,7 +82,6 @@ body{
     .weatherReport p{
         color: navy;
         font-weight: bold;
-        margin-bottom: 2%;
     }
 
     .weatherReport h1{
