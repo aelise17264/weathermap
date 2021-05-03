@@ -67,12 +67,12 @@ body{
 }
 
 .weatherReport{ 
-    margin-top: 10vh;
+    margin-top: 15vh;
     /* background: rgba(49, 78, 82, .75); */
     background: rgba(255, 255, 255, .5);
     width: 40vw;
     height: 90vh;
-    padding: 2%;
+    padding: 3%;
     color: #314e52;
     align-items: center;
     font-family: 'Roboto Mono', serif;
