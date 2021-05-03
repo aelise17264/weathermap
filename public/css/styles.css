@@ -9,11 +9,11 @@ body{
 }
 
 .landingPage{
-    margin-top: 5vh;
+    margin-top: 15vh;
     background: rgba(255, 255, 255, .5);
     width: 35vw;
     height: 45vh;
-    padding-top: 5%;
+    padding-top: 2%;
     color: #314e52;
 }
 
@@ -67,10 +67,10 @@ body{
 }
 
 .weatherReport{ 
-    margin-top: 15vh;
+    margin-top: 10vh;
     /* background: rgba(49, 78, 82, .75); */
     background: rgba(255, 255, 255, .5);
-    width: 35vw;
+    width: 40vw;
     height: 90vh;
     padding: 2%;
     color: #314e52;
